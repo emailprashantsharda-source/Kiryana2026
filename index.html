@@ -551,5 +551,34 @@ function rstA(){["kp","ks","kpu","ke","kc","ku","ksu","kcd","kst","kwa","kupi"].
 render();
 
 </script>
+  <script type="module">
+// 🔥 Import Firebase (NO npm needed)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// 🔥 YOUR CONFIG (PASTE FROM FIREBASE HERE)
+const firebaseConfig = {
+  apiKey: "AIzaSyDMYk5OBbCuSG3eZZUgVovfnLtQH77OJy8",
+  authDomain: "panwala-app.firebaseapp.com",
+  projectId: "panwala-app",
+  storageBucket: "panwala-app.firebasestorage.app",
+  messagingSenderId: "980463819043",
+  appId: "1:980463819043:web:11b142c96fdfacee735496"
+};
+
+// 🔥 Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// 🔥 Init services
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// 🔥 Make global (IMPORTANT for next steps)
+window.auth = auth;
+window.db = db;
+
+console.log("🔥 Firebase Connected Successfully");
+  </script>
 </body>
 </html>
