@@ -47,6 +47,12 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 </style>
 </head>
 <body>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.body.style.display = "none"; // hide everything first
+    document.getElementById("login-screen").style.display = "block"; // show login only
+  });
+  </script>
   
 
 <!-- ✅ PASTE LOGIN UI HERE (RIGHT AFTER BODY) -->
